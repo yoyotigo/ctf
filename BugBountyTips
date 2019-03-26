@@ -1,0 +1,66 @@
+Notes Taken from Jason Haddix - DEF CON presentations
+
+Mapping:
+Dirbuster / Burp (Common)
+RAFT lists / SVN Digger (Smart Dir brute forcing)
+
+Platform Identification:
+Wapplyzer / Builtwith / retire.js
+
+Auxiliary:
+WPScan (wordpress plugins / vulns) / CMSmap  (drupal and joomla)
+
+Directory Bruteforcing Tips:
+-After bruteforcing, look for other status codes indicating you are denied or require auth, then append 
+list there, to test for bad access control
+Example: 
+http://www.google.com - 200
+http://www.google.com/backlog - 404 - on privileges
+http://www.google.com/backlog/controlpanel/ - 401 - interesting, bruteforce here 
+
+Tactical Fuzzing - XSS
+-Does page functionality display something to users?
+-Many testers use Polyglot payloads
+-Cheat sheet: https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet#Basic_XSS_Test_Without_Filter_Evasion
+-Observations of what to exploit with xss:
+  -Cutomizable themes and profiles via CSS
+  -Event or meeting names, custom error pages, loging and forgot password forms, URI based, importing from 3rd parties
+-SWF Parameter xss: onload, alloweddomain, xmlpath, eventhandler, callback (cure53/Flashbang github)
+
+SQL Injection
+-Does page look like it might need to call on stored data?
+SLEEP (1) /*' or SLEEP(1) or '" or SLEEP(1) or "*/
+-danielmiessler/SecLists github
+-SQLMap is great tool, use Tamper Scripts if website blacklists you.
+-Common injection points: ID, Currency, Item number values, sorting parameters, Cookie values, custom headers
+SQL injection cheatsheets:
+-mySQL: pentestmonkeys mysql / reiners mySQL injection filter evasion 
+-MSSQL: evilsqls error/union/bind mssql / pentestmonkeys mssql injection
+-Oracle: pentestmonkeys oracle sqli
+-PostgreSQL: pentestmonkeys postgres sqli
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
