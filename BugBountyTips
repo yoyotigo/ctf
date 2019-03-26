@@ -39,13 +39,68 @@ SQL injection cheatsheets:
 -Oracle: pentestmonkeys oracle sqli
 -PostgreSQL: pentestmonkeys postgres sqli
 
+File Inclusion and Uploads
+-File inclusion: Does it interact with the server file system?
+-Can use liffy or Seclists
+/.../.../.../.../
+-Common parameters / injection points: file= / location= / path= / display= / read=
+
+Malicious File Upload++
+-Attacks: Upload unexpected file formate to achieve code execution / Execute XSS via same types of files / 
+attack the parser to DoS the sit or XSS via storing payloads in metadata or file header /
+bypass security zones and store malware on target site 
+-Checkout File in the hole! presentation http://goo.gl/VCXPh6
+
+Remote file includes and redirects
+-Look for any parameter with another web address in it
+-Common blacklist bypasses: /, \/, remove http, ./ to ..//, / to //
+
+Cross-Site Request Forgery (CSRF)
+-Find sensitive functions (Burps CSRF PoC is fast and easy)
+-Focus on CSRF bypasses: remove CSRF token from request or parameter value, add bad control chars to csrf param value,
+change POST to GET
+-Python tool to automate finding CSRF bypasses: Burpy 
+To use burpy: Enable logging in Burp, crawl a site with burp completely executing all functons
+              Then create a template
+-Common critical functions: Add/upload file, password change, email change, delete file, profile edit
+
+Privilege
+-Find site functionality that is restricted to certain users, try to access those functions with 
+other user roles, try to directly browse to views with sensitive info as lesser user
+-Authorize Burp plugin  github.com/Quitten/Autorize
+
+Insecure direct object references
+-Find any and all UIDs: Increment, decrement, negative values, attempt to perform
+sensitive function substituting another UID (change pass, forgot pass, admin only functions)
+-Common functions: Everything from CSRF table, UIDs, user hashes or emails, recepits,
+sending / deleting messages, shipping info and purchase orders
+Example: amazon.com/receipt=25501 if you change this number and get someone else's receipt
+
+Logic 
+-Substituing hashed parameters, step manipulation(checkout->ship skip paying), use negatives in quantities,
+auth bypass, application level DoS(cant handle to many parameters?), timing attacks
+
+Other vulns
+-Content spoofing / html injection
+-Referer leakage
+-Security headers
+-Path dislosure
+-Clickjacking
+
+Jasons Quick Steps - Data Driven Assessment
+1. Visit search, registration, contact, pass reset, etc and hit them with polyglot strings
+2. Scan specific functions with Burp's built-in scanner
+3. Check cookie, log out, check cookie, log in, check cookie, submit old cookie, access?
+4. User enumeration checks on login, registration, password reset
+5. Reset and see if password is plaintext, uses URL based token, is predicatable?, can be used multiple times,
+logs you in automatically?
+6. Find unmeric account identifiers in URLs and rotate them for context change
+7. Find security-sensitive functions or files
+8. Dir brute for top short list on seclists
+9. Check upload functions for alternate file types that can exe code (xss/php/etc)
 
 
-
-
-
-
-
+Gitbook project: The Bug Hunters Methodology
 
 
 
