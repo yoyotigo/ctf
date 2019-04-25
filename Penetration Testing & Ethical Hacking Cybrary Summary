@@ -32,3 +32,30 @@ How to footprint?
 -Maltego
 -Recon-ng
 -OSRFramework
+
+Google Hacking:
+-filetype: type , searched for only files of specific type
+-intitle: string, searched for pages that contain the string in the title
+-inurl: string, displays pages with the string in the URL 
+-site: domain, displayes pages for specific website/domain
+
+Nikto:
+-To find potentials vulnerabilities on a website
+nikto -e 1 -h google.ca
+
+Theharvester:
+-Good info gathering
+-Used an example command displayed from theharvester -h 
+
+Google Hacking:
+-Use the google hacking database on exploit-db
+
+
+
+
+
+
+
+
+
+
