@@ -14,3 +14,21 @@ internal controls
 
 Module 2: Footprinting
 ----------------------
+Footprinting Types:
+-Active: Interacting with person of interest, performing port scan
+-Passive: Publicly available info, google search
+
+Benefits:
+-Knowledge of security posture
+-Reduce focus area
+-Identify vulnerabilites
+-Networking mapping
+
+How to footprint?
+-Search engines / google hacking
+-Shodan (hackers search engine that allows you to see vulnerable devices)
+-Whois
+-Social media
+-Maltego
+-Recon-ng
+-OSRFramework
