@@ -1,2 +1,16 @@
-# H1
+PenTEsting & Ethical Hacking
+============================
 
+Module 1: The Basics
+--------------------
+Laws:
+-HIPAA: Health Insruance Prtability and Accountability Act safeguards private medical info
+-PCI-DSS: Protext card holder data, secure network and systems, maintain vuln managemnet program, etc
+-SOX: Sarbanes-Oxley Act manage doc controls and assess effectiveness of internal controls, external auditors test
+internal controls
+-DMCA: Digital Millennium Copyright Act
+-FISMA: Federal Info Security Management Act has annual reviews of info sec 
+-ISO/IEC 27001:2013: Management examins info sec risks, design and implement sec controls and monirtor controls
+
+Module 2: Footprinting
+----------------------
