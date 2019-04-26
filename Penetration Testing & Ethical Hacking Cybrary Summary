@@ -51,6 +51,88 @@ Google Hacking:
 -Use the google hacking database on exploit-db
 
 
+Module 3: Scanning & Enumeration
+--------------------------------
+
+Scanning Methodology:
+1. Check for live systems
+2. Check for open ports
+3. Scan beyond the IDS 
+4. Banner grabbing
+5. Scan for vulnerabilities
+6. Draw network diagrams
+7. Prepare proxies
+
+Three-way Handshake:
+-SYN, SYN/ACK, ACK
+
+TCP Header Flags
+-Synchronize(SYN): set during intial communication establishment, indicates negotiation of parameters and sequence numbers
+-Acknowledgments(ACK): set as an acknowledgment of a SYN flag
+-Reset(RST): Forces termination of communication in both directions
+-Finish(FIN): Flag signifying an ordered close to communications
+-Push(PSH): Forces delivery of data, without concern for buffering
+-Urgent(URG): indicates the data is being sent out of band
+
+TCP Handshake:
+ 
+Host A -> (SYN 100) -> Host B : Request to communicate
+Host A <- (SYN 300 / ACK 101) <- Host B : Acknowledge communication and request communication
+Host A -> (ACK 301) -> Host B : Acknowledge communication established
+
+Fragmentation:
+-Breaking packets into smaller chunks to get them past intrusion detection systems
+-Can use colasoft packet builder for this
+
+ICMP:
+-Internet Control Message Protocol
+
+ICMP Message Type           Description
+0:Echo Reply                Answer to the Type 8 Echo Request
+3:Destination Unreachable   0, 1, 6, 7, 9, 10, 13
+4:Source Quench             A congestion control message
+5:Redirect                  0(Redirect network), 1(Redirect host)
+8:Echo Request              Ping message that requests the Echo reply
+11:Time exceeded
+
+Types of port scans
+-Full-open: Runs three-way handshake on all ports, easy to detect 
+-Half-open: Stealthy, no 3 way handshake
+-Inverse TCP: uses FIN,URG,PSH flags, no response means port is open
+-XMAS: Does not work on Windows
+-ACK: ACK packet sent and header reviewed for RST packet TTL 64<
+-IDLE: Spoofed IP address
+
+Banner Grabbing
+-Mainly trying to check waht operating system is in use
+-Telnet 10.10.10.152 80
+
+Enumeration:
+-Discovery of hosts or devices
+-LDAP / SNMP
+
+Vulnerability Tools:
+-OpenVAS 
+-Nessus 
+
+Vulnerability Scoring System
+-Scores range from o to 10
+
+Vulnerability Management Lifecycle
+Discover Vuln -> Prioritize Assets -> Assess -> Report -> Remediate -> Verify -> Repeat
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
