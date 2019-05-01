@@ -121,6 +121,11 @@ Vulnerability Scoring System
 Vulnerability Management Lifecycle
 Discover Vuln -> Prioritize Assets -> Assess -> Report -> Remediate -> Verify -> Repeat
 
+Port Scanning Lab
+-----------------
+nmap {target ip}  -syn scans 1000 of the most common ports
+hping3 -8 0-5000 -S {target ip}  -syn scans ports 0-5000
+
 
 
 
