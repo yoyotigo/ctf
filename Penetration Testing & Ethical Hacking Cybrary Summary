@@ -146,13 +146,75 @@ nc {target.ip+port}
 GET /dwva/ HTTP/1.1
 HOST: {target.ip}
 
+Enumeration
+-----------
+Can use nslookup / dig / finger
 
 
 
+System Hacking
+==============
+
+Sam File:
+-Security Accounts Manager
+-Stores password hashes
+-SYSKEY
+
+Password Attacks:
+-Dictionary, brute-force, rule-based, rainbow tables
+-Rainbow tables are precomputed tables
+
+Password Salting:
+-Random data input in the hash
+-Randomly generated for each password
+
+Tools:
+-Aircrack ng
+-Cain and Abel
+-John the Ripper
+-Hydra
+-Hashcat
+
+Spectre and Meltdown:
+-Computer chips contain security flaws
+-Protected memory being stored in CPU cache
+-Most major flaws are patched as of now
+
+Rootkits:
+-Provide continued access to a computer
+-Run stealthily
+-Horse Pill: Infects initial ramdisk in linux so it controls early in boot process
+-Gray fish: attributed to the Equation Group (NSA), listen as Trojan.Wind32.GrayFish.b
+
+Steganography Tools
+-QuickStego: BMP, JPEG, GIF
+-OpenStego: BMP, PNG
+-MP3Stego: MP3
+-StegoShare
+
+Covering BASH Tracks
+-Bash stands for Bourne Again Shell
+-Disable history: export HISTSIZE=0
 
 
+What does TFTP stand for?
+Trivial File Transfer Protocol
 
+TFTP can be used to?
+Allow client to get a file from or put a file onto a remote host
 
+What RFC helps define how TFTP protocol works?
+RFC 1350
+
+What allows a attacker to open command-line shells on your pc and collect your info?
+Backdoor Trojans
+
+TFTP: Trivial File Transfer Protocol, which is a simple protocol for transferring files to or from a remote host. 
+Transfer requests are intiaited on port 69, TFTP cannot do user auth or list directories
+
+Examples of RAT Backdoors:
+-Gh0st
+-Mirai botnet: IoT
 
 
 
