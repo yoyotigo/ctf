@@ -217,6 +217,64 @@ Examples of RAT Backdoors:
 -Mirai botnet: IoT
 
 
+Module 5: Malware
+=================
+
+-Computer slows down, ad pop-ups, system resources use is high, new toolbars/extensions, antivirus disabled
+
+Viruses:
+-Malicious computer programs that can self-replicate. They attach to another ifle
+and move host to host. 
+-The virus needs to have some kind of host program to propagate
+-Design->Replication->Launch->Detection->Incorporation->Elimination
+-Boot sector virus: moves voot sector to another location on hdd 
+-Randomware: Locks you out of system
+-Shell virus: Wraps itself around code of an application
+-Cluster virus: modfies discovery table entries, so system and user processes are pointed to virus code
+-Multipartite virus: Attempts to infect boot sector and files at the same time
+-Macro virus: Infects template files created by microsoft office
+-Polymorphic code virus: mutates its code, so signature constantly changes
+-Encryption virus: uses encryption to evade antivirus detection
+-Metamorphic virus: Reqrites itself every time it infects a new file
+-Stealth virus: attempts to evade AV by intercepting antivirus request to the OS
+-Cavity virus: overwites portions of host files, so it doesn't increase size of files
+-Sparse infector virus: Infect occasionally (once a month)
+-File extension virus: Changes file extensions and people who have file extension view turned off
+
+Worms:
+-A self-replicating and self-propagating program that uses networking mechanisms to spread itself. 
+Worms eat up resources
+-Code red: exploited IIS servers in 2001 using buffer overflow
+-SQL Slammer: DoS worm that attacked buffer overflow weaknesses in Microsft SQL
+-Nimda: Spread through open network shares,websites & emails
+
+Trojans: 
+-Appear to perform a desired function, but actually performs actions without the users knowledge,
+intended to steal info or harm users system/data
+-Covert channel: used to transmit info in a way that is illegitimate or impossible
+-Over channel: Used to send info or perform other actions in legitimate way
+-Indications of Trojan infection: CD drawer open/close, Computer screen issues,
+browser redirection, mouse disappear, documents randomly print, etc
+
+Trojan common ports:
+-Back orifice: UDP 31337/31338
+-Beast: TCP 6666
+-Whack-a-mole: TCP 12361/12362
+
+Knowledge Check:
+Q1. Port 23 is what?
+-Telnet, port 25 is SMTP, port 22is SSH
+Q2. Port 389 is what?
+-LDAP Lightweight directory access protocol, Port 110 is POP3, Port 88 is KErberos
+Q3. Hash caulclation tools can be used to check?
+-File integrity
+Q4. NetBIOS Datagram service runs on what port?
+-Port 138
+
+
+
+
+
 
 
 
