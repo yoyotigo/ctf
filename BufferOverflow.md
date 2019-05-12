@@ -1,14 +1,11 @@
-What's a buffer?
-
+What's a buffer?<br/>
 -Memory locations in a program, used for storing data that is being used by the program. 
 
-What is buffer overflow?
-
+What is buffer overflow?<br/>
 -A process in which a program writes data outside of its temp storage, into other areas of 
 program memory not designated to store secure data.
 
-What happens when a buffer overflow occurs?
-
+What happens when a buffer overflow occurs?<br/>
 -Program may crash / slow down
 -May return bad data
 -Runs other programs or commands (command execution)
