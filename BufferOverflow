@@ -10,3 +10,4 @@ What happens when a buffer overflow occurs?
 -May return bad data
 -Runs other programs or commands (command execution)
 
+![alt text](https://www.hackingtutorials.org/wp-content/uploads/2016/12/buffer-overflow-example.jpg)
