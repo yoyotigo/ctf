@@ -10,9 +10,7 @@ program memory not designated to store secure data.
 What happens when a buffer overflow occurs?
 
 -Program may crash / slow down
-
 -May return bad data
-
 -Runs other programs or commands (command execution)
 
 ![bufferoverflo](https://www.hackingtutorials.org/wp-content/uploads/2016/12/buffer-overflow-example.jpg)
